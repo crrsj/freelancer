@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Roberto - Desenvolvedor Backend Java</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B00;
+            --secondary: #0072C6;
+            --accent: #00C853;
+            --dark: #121212;
+            --light: #F5F5F5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23121212" width="100" height="100"/><path fill="%23FF6B00" d="M25,25h50v50H25Z"/></svg>');
+            background-size: 300px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--light);
+        }
+        
+        .specialization {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contacts {
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contacts-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            width: 220px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .contact-text {
+            font-size: 1.1rem;
+            color: white;
+            word-break: break-all;
+        }
+        
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-link:hover {
+            color: var(--light);
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--light);
+            border-top: 2px solid var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .specialization {
+                font-size: 1.5rem;
+            }
+            
+            .contact-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        .java-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Carlos Junior</div>
+            <div class="tagline">Desenvolvimento Backend Java de Qualidade</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Carlos Roberto Ribeiro Santos Junior</h1>
+            <div class="specialization">Desenvolvedor Backend Java Freelancer</div>
+            <p>Soluções robustas e escaláveis para suas necessidades de desenvolvimento backend.</p>
+            <div class="java-badge">Java Developer</div>
+        </div>
+    </section>
+    
+    <section class="contacts">
+        <div class="container">
+            <h2 class="contacts-title">Entre em Contato</h2>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text"></div>
+                    <a href="http://wa.me/5579988317115" class="contact-link">79-988317115</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <a href="mailto:crrsj1@gmail.com" class="contact-link">crrsj1@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-text">
+                        <a href="https://linkedin.com/in/carlos-roberto-dev-java/" target="_blank" class="contact-link">linkedin.com/in/carlos-roberto-dev-java</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="contact-text">
+                        <a href="https://www.youtube.com/@CarlosRoberto-wl4kh" target="_blank" class="contact-link">@CarlosRoberto-wl4kh</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Carlos Roberto Ribeiro Santos Junior - Desenvolvedor Backend Java Freelancer</p>
+        </div>
+    </footer>
+</body>
+</html>
