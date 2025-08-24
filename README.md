@@ -65,3 +65,4 @@ Desktops e notebooks
 Telas grandes e ultrawide
 
 ![landingpage](https://github.com/user-attachments/assets/2aae6de1-890b-414f-91b8-bc9cc8bbeded)
+![landingpage2](https://github.com/user-attachments/assets/c80c50aa-35da-4edb-b1cc-95593e8831fb)
